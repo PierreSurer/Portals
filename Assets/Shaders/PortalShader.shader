@@ -7,8 +7,10 @@ Shader "Unlit/PortalShader"
         _GradientMap("GradientMap", 2D) = "black" {}
         _FlowMap("FlowMap", 2D) = "white" {}
         _PortalEffect("Portal effect", Range(0, 10)) = 10.0
-        _FlowSpeed("Flow speed", Range(0, 10)) = 1.0
+        _FlowSpeed("Flow speed", Range(0, 100)) = 1.0
         _Falloff("Falloff", Range(0, 100)) = 50.0
+
+        _Border("Border", Range(0, 2)) = 0.0
         
     }
     SubShader
@@ -58,6 +60,7 @@ Shader "Unlit/PortalShader"
             float _Falloff;
             float _PortalEffect;
             float _FlowSpeed;
+            float _Border;
 
             fixed4 _Color;
 
@@ -76,12 +79,15 @@ Shader "Unlit/PortalShader"
                 fixed4 border1 = (tex2D(_GradientMap, i.uv + (flow * time1)) / 2.0) + 0.75;
                 fixed4 border2 = (tex2D(_GradientMap, i.uv + (flow * time2)) / 2.0) + 0.75;
                 fixed4 finalBorder = (border1 * (1.0f - mixed) + border2 * mixed) * _Color;
-                
+
                 float x = i.uv.x - 0.5f;
                 float y = i.uv.y - 0.5f;
                 float dist = (x * x + y * y) * 4.0f;
 
                 img.xyz = lerp(finalBorder, img.xyz, clamp(1 - pow(dist, _PortalEffect), 0.0f, 1.0f));
+
+                
+                dist = max(dist + _Border * ((border1 * (1.0f - mixed) + border2 * mixed) - 0.5f), 0.0f);
                 
                 img.a = clamp(1 - pow(dist, _Falloff), 0.0f, 1.0f);
 
