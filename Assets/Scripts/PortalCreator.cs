@@ -41,26 +41,36 @@ public class PortalCreator : MonoBehaviour
         rightClick.Enable();
     }
 
-    void Update()
+    bool portalCompatibility(MeshRenderer surface, MeshRenderer portal)
     {
-
+        return surface.bounds.size.x >= portal.bounds.size.x &&
+            surface.bounds.size.y >= portal.bounds.size.y &&
+            surface.bounds.size.z >= portal.bounds.size.z;
     }
-
-    bool portalCompatibility(GameObject portal)
-    {
-        return true;
-    }
-
 
     bool createPortal(int id, RaycastHit hit)
     {
-        if(portalCompatibility(pair.getPortalObject(id)))
+        MeshRenderer surfaceMesh = hit.transform.gameObject.GetComponent<MeshRenderer>();
+        MeshRenderer portalMesh = pair.getPortalObject(id).GetComponent<MeshRenderer>();
+        if (portalCompatibility(surfaceMesh, portalMesh))
         {
-            Transform newTransform = hit.transform;
-            newTransform.position = hit.point + 0.01f * hit.normal;
-            transform.forward = -hit.normal;
-            Debug.Log(id);
-            pair.createPortal(id, newTransform);
+            Debug.Log(hit.textureCoord2);
+            Vector3 position = hit.point + 0.01f * hit.normal;
+            Quaternion rotation = Quaternion.LookRotation(-hit.normal, Vector3.up);
+
+
+            Vector3 offset = new Vector3();
+            float xPos = (1.0f - hit.textureCoord2.x) * surfaceMesh.bounds.size.x;
+            float yPos = (1.0f - hit.textureCoord2.y) * surfaceMesh.bounds.size.y;
+            if (xPos - portalMesh.bounds.size.x / 2.0f < 0.0f) offset.x = portalMesh.bounds.size.x / 2.0f - xPos;
+            if (xPos + portalMesh.bounds.size.x / 2.0f > surfaceMesh.bounds.size.x) offset.x = surfaceMesh.bounds.size.x - (xPos + portalMesh.bounds.size.x / 2.0f);
+            if (yPos - portalMesh.bounds.size.y / 2.0f < 0.0f) offset.y = portalMesh.bounds.size.y / 2.0f - yPos;
+            if (yPos + portalMesh.bounds.size.y / 2.0f > surfaceMesh.bounds.size.y) offset.y = surfaceMesh.bounds.size.y - (yPos + portalMesh.bounds.size.y / 2.0f);
+            Debug.Log(offset);
+            position += rotation * offset;
+            rotation *= Quaternion.Euler(-90.0f, 0.0f, 0.0f);
+            pair.createPortal(id, hit.transform, position, rotation);
+
         }
         return true;
     }

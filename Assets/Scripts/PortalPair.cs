@@ -35,17 +35,49 @@ public class PortalPair : MonoBehaviour
         }
     }
 
-    public bool createPortal(int id, Transform newTransform)
+    public bool createPortal(int id, Transform parentTransform, Vector3 position, Quaternion rotation)
     {
         switch (id)
         {
             case (0):
                 if (redPortalInstance) Destroy(redPortalInstance);
-                redPortalInstance = Instantiate(redPortalObject, newTransform);
+                redPortalInstance = Instantiate(redPortalObject, parentTransform);
+                redPortalInstance.transform.position = position;
+                redPortalInstance.transform.rotation = rotation;
+                if (bluePortalInstance && parentTransform == bluePortalInstance.transform.parent)
+                {
+                    MeshRenderer thisMesh = redPortalInstance.GetComponent<MeshRenderer>();
+                    MeshRenderer otherMesh = bluePortalInstance.GetComponent<MeshRenderer>();
+                    if (thisMesh.bounds.Intersects(otherMesh.bounds)) Destroy(bluePortalInstance);
+                }
                 break;
             case (1):
                 if (bluePortalInstance) Destroy(bluePortalInstance);
-                bluePortalInstance = Instantiate(bluePortalObject, newTransform);
+                bluePortalInstance = Instantiate(bluePortalObject, parentTransform);
+                bluePortalInstance.transform.position = position;
+                bluePortalInstance.transform.rotation = rotation;
+                if(redPortalInstance && parentTransform == redPortalInstance.transform.parent)
+                {
+                    MeshRenderer thisMesh = bluePortalInstance.GetComponent<MeshRenderer>();
+                    MeshRenderer otherMesh = redPortalInstance.GetComponent<MeshRenderer>();
+                    if(thisMesh.bounds.Intersects(otherMesh.bounds)) Destroy(redPortalInstance);
+                }
+                break;
+            default:
+                return false;
+        }
+        return true;
+    }
+
+    public bool deletePortal(int id)
+    {
+        switch (id)
+        {
+            case (0):
+                if (redPortalInstance) Destroy(redPortalInstance);
+                break;
+            case (1):
+                if (bluePortalInstance) Destroy(bluePortalInstance);
                 break;
             default:
                 return false;
@@ -53,3 +85,6 @@ public class PortalPair : MonoBehaviour
         return true;
     }
 }
+
+
+
