@@ -9,16 +9,6 @@ public class PortalPair : MonoBehaviour
     [SerializeField]
     private GameObject bluePortalObject;
 
-    //public GameObject RedPortalObject
-    //{
-    //    get { return redPortalObject; }
-    //}
-
-    //public GameObject BluePortalObject
-    //{
-    //    get { return bluePortalObject; }
-    //}
-
     private GameObject redPortalInstance;
     private GameObject bluePortalInstance;
 
@@ -42,6 +32,19 @@ public class PortalPair : MonoBehaviour
             case (0):
                 if (redPortalInstance) Destroy(redPortalInstance);
                 redPortalInstance = Instantiate(redPortalObject, parentTransform);
+
+                PortalCamera redPortalCamera = redPortalInstance.GetComponentInChildren<PortalCamera>();
+                redPortalCamera.mainCameraObj = this.gameObject;
+                redPortalCamera.sourcePortalObj = redPortalInstance;
+                if(bluePortalInstance)
+                {
+                    redPortalCamera.targetPortalObj = bluePortalInstance;
+                    PortalCamera other = bluePortalInstance.GetComponentInChildren<PortalCamera>();
+                    other.targetPortalObj = redPortalInstance;
+                }
+                    
+                redPortalCamera.updateProperties();
+
                 redPortalInstance.transform.position = position;
                 redPortalInstance.transform.rotation = rotation;
                 if (bluePortalInstance && parentTransform == bluePortalInstance.transform.parent)
@@ -54,6 +57,18 @@ public class PortalPair : MonoBehaviour
             case (1):
                 if (bluePortalInstance) Destroy(bluePortalInstance);
                 bluePortalInstance = Instantiate(bluePortalObject, parentTransform);
+
+                PortalCamera bluePortalCamera = bluePortalInstance.GetComponentInChildren<PortalCamera>();
+                bluePortalCamera.mainCameraObj = this.gameObject;
+                bluePortalCamera.sourcePortalObj = bluePortalInstance;
+                if (redPortalInstance)
+                {
+                    bluePortalCamera.targetPortalObj = redPortalInstance;
+                    PortalCamera other = redPortalInstance.GetComponentInChildren<PortalCamera>();
+                    other.targetPortalObj = bluePortalInstance;
+                }
+                bluePortalCamera.updateProperties();
+
                 bluePortalInstance.transform.position = position;
                 bluePortalInstance.transform.rotation = rotation;
                 if(redPortalInstance && parentTransform == redPortalInstance.transform.parent)

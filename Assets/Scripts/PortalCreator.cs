@@ -26,6 +26,10 @@ public class PortalCreator : MonoBehaviour
             {
                 createPortal(0, hit);
             }
+            else
+            {
+                Debug.Log("nop");
+            }
         };
         leftClick.Enable();
 
@@ -43,6 +47,7 @@ public class PortalCreator : MonoBehaviour
 
     bool portalCompatibility(MeshRenderer surface, MeshRenderer portal)
     {
+        return true;
         return surface.bounds.size.x >= portal.bounds.size.x &&
             surface.bounds.size.y >= portal.bounds.size.y &&
             surface.bounds.size.z >= portal.bounds.size.z;
