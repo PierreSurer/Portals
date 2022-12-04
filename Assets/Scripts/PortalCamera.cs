@@ -12,7 +12,6 @@ public class PortalCamera : MonoBehaviour
 
     public void updateProperties()
     {
-        Debug.Log(mainCameraObj);
         mainCamera = mainCameraObj.GetComponent<Camera>();
         portalCamera = GetComponent<Camera>();
 

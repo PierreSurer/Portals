@@ -51,7 +51,7 @@ public class PortalPair : MonoBehaviour
                 {
                     MeshRenderer thisMesh = redPortalInstance.GetComponent<MeshRenderer>();
                     MeshRenderer otherMesh = bluePortalInstance.GetComponent<MeshRenderer>();
-                    if (thisMesh.bounds.Intersects(otherMesh.bounds)) Destroy(bluePortalInstance);
+                    if (thisMesh.bounds.Intersects(otherMesh.bounds)) deletePortal(1);
                 }
                 break;
             case (1):
@@ -75,7 +75,7 @@ public class PortalPair : MonoBehaviour
                 {
                     MeshRenderer thisMesh = bluePortalInstance.GetComponent<MeshRenderer>();
                     MeshRenderer otherMesh = redPortalInstance.GetComponent<MeshRenderer>();
-                    if(thisMesh.bounds.Intersects(otherMesh.bounds)) Destroy(redPortalInstance);
+                    if(thisMesh.bounds.Intersects(otherMesh.bounds)) deletePortal(0);
                 }
                 break;
             default:

@@ -3,6 +3,7 @@ Shader "Unlit/PortalShader"
     Properties
     {
         _Color("Color", Color) = (1,1,1,1)
+        [MaterialToggle] _isTextured("Is textured", Float) = 0
         _MainTex ("Texture", 2D) = "white" {}
         _GradientMap("GradientMap", 2D) = "black" {}
         _FlowMap("FlowMap", 2D) = "white" {}
@@ -11,6 +12,7 @@ Shader "Unlit/PortalShader"
         _Falloff("Falloff", Range(0, 100)) = 50.0
 
         _Border("Border", Range(0, 2)) = 0.0
+        
         
     }
     SubShader
@@ -63,6 +65,7 @@ Shader "Unlit/PortalShader"
             float _PortalEffect;
             float _FlowSpeed;
             float _Border;
+            float _isTextured;
 
             fixed4 _Color;
 
@@ -86,6 +89,7 @@ Shader "Unlit/PortalShader"
                 float y = i.uv.y - 0.5f;
                 float dist = (x * x + y * y) * 4.0f;
 
+                if (_isTextured == 0.0f) _PortalEffect = 0.0f;
                 img.xyz = lerp(finalBorder, img.xyz, clamp(1 - pow(dist, _PortalEffect), 0.0f, 1.0f));
 
                 

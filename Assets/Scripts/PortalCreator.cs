@@ -26,10 +26,7 @@ public class PortalCreator : MonoBehaviour
             {
                 createPortal(0, hit);
             }
-            else
-            {
-                Debug.Log("nop");
-            }
+
         };
         leftClick.Enable();
 
@@ -71,7 +68,6 @@ public class PortalCreator : MonoBehaviour
             if (xPos + portalMesh.bounds.size.x / 2.0f > surfaceMesh.bounds.size.x) offset.x = surfaceMesh.bounds.size.x - (xPos + portalMesh.bounds.size.x / 2.0f);
             if (yPos - portalMesh.bounds.size.y / 2.0f < 0.0f) offset.y = portalMesh.bounds.size.y / 2.0f - yPos;
             if (yPos + portalMesh.bounds.size.y / 2.0f > surfaceMesh.bounds.size.y) offset.y = surfaceMesh.bounds.size.y - (yPos + portalMesh.bounds.size.y / 2.0f);
-            Debug.Log(offset);
             position += rotation * offset;
             rotation *= Quaternion.Euler(-90.0f, 0.0f, 0.0f);
             pair.createPortal(id, hit.transform, position, rotation);
