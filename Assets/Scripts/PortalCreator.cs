@@ -31,7 +31,6 @@ public class PortalCreator : MonoBehaviour
 
         rightClick = new InputAction(binding: "<Mouse>/rightButton");
         rightClick.performed += right => {
-            Debug.Log(hitLayer);
 
             RaycastHit hit;
             Vector3 coor = Mouse.current.position.ReadValue();
@@ -48,7 +47,6 @@ public class PortalCreator : MonoBehaviour
         MeshRenderer surfaceMesh = hit.transform.gameObject.GetComponent<MeshRenderer>();
         MeshRenderer portalMesh = pair.getPortalObject(id).GetComponent<MeshRenderer>();
 
-        Debug.Log(hit.textureCoord2);
         Vector3 position = hit.point + 0.01f * hit.normal;
         Quaternion rotation = Quaternion.LookRotation(-hit.normal, Vector3.up);
 
