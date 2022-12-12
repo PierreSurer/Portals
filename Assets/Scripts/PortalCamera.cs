@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class PortalCamera : MonoBehaviour
 {
-    public GameObject mainCameraObj;
-    public GameObject sourcePortalObj;
-    public GameObject targetPortalObj;
+    [SerializeField]
+    private GameObject mainCameraObj;
+    [SerializeField]
+    private GameObject sourcePortalObj;
+    [SerializeField]
+    private GameObject targetPortalObj;
+
     private Camera mainCamera;
     private Camera portalCamera;
 
