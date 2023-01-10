@@ -53,23 +53,23 @@
     <UnityVersion>2020.3.34f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Editor\PXR_PlatformSettingEditor.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Editor\PXR_SDKBuildCheck.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Editor\BuildTool\PXR_ADBTool.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Editor\PXR_Metadata.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Editor\BuildTool\PXR_DirectorySyncer.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Editor\PXR_SDKSettingAsset.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Editor\BuildTool\PXR_BuildAndRunEW.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Editor\PXR_SettingsEditor.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Editor\PXR_BuildProcessor.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Editor\BuildTool\PXR_SceneQucikPreviewEW.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Editor\BuildTool\PXR_BuildToolManager.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Editor\PXR_Metadata.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Editor\BuildTool\PXR_DirectorySyncer.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Editor\PXR_SettingsEditor.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Editor\PXR_OverLayEditor.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Editor\PXR_ManagerEditor.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Editor\PXR_SDKSettingEditor.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Editor\BuildTool\PXR_SceneQucikPreviewEW.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Editor\BuildTool\PXR_BuildToolManager.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Editor\BuildTool\PXR_PathHelper.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -309,9 +309,6 @@
     </Reference>
     <Reference Include="UnityEditor.UWP.Extensions">
       <HintPath>C:\Unity 2020.3.34f1\Editor\2020.3.34f1\Editor\Data\PlaybackEngines\MetroSupport\UnityEditor.UWP.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
-      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="StarterAssetsPackageChecker">
       <HintPath>Assets\StarterAssets\Editor\PackageChecker\StarterAssetsPackageChecker.dll</HintPath>
@@ -688,11 +685,11 @@
     <Reference Include="Unity.XR.Management.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.Management.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
       <HintPath>Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
