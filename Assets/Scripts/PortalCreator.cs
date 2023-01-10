@@ -47,6 +47,20 @@ public class PortalCreator : MonoBehaviour
         MeshRenderer surfaceMesh = hit.transform.gameObject.GetComponent<MeshRenderer>();
         MeshRenderer portalMesh = pair.getPortalObject(id).GetComponent<MeshRenderer>();
 
+        pair.getPortalObject(id).gameObject.SetActive(true);
+        if (pair.getPortalObject(1 - id).gameObject.activeInHierarchy)
+        {
+            MeshRenderer otherPortalMesh = pair.getPortalObject(1-id).GetComponent<MeshRenderer>();
+            portalMesh.sharedMaterial.SetFloat("_isTextured", 1.0f);
+            otherPortalMesh.sharedMaterial.SetFloat("_isTextured", 1.0f);
+        }else
+        {
+            MeshRenderer otherPortalMesh = pair.getPortalObject(1 - id).GetComponent<MeshRenderer>();
+            portalMesh.sharedMaterial.SetFloat("_isTextured", 0.0f);
+            otherPortalMesh.sharedMaterial.SetFloat("_isTextured", 0.0f);
+        }
+
+
         Vector3 position = hit.point + 0.01f * hit.normal;
         Quaternion rotation = Quaternion.LookRotation(-hit.normal, Vector3.up);
 
@@ -59,6 +73,8 @@ public class PortalCreator : MonoBehaviour
         if (yPos + portalMesh.bounds.size.y / 2.0f > surfaceMesh.bounds.size.y) offset.y = surfaceMesh.bounds.size.y - (yPos + portalMesh.bounds.size.y / 2.0f);
         position += rotation * offset;
         pair.createPortal(id, hit.transform, position, rotation);
+
+        hit.transform.gameObject.GetComponent<MeshModifier>().calculateMesh();
 
         return true;
     }
