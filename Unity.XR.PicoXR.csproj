@@ -57,58 +57,58 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Achievement\PXR_AchievementProgress.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Features\PXR_FPS.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\PXR_Usages.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\PXR_Loader.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\PXR_Plugins.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Payment\DemoController.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Payment\LoginSDK.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Features\PXR_OverLay.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Utils\UIEvent\PXR_EnumFlags.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\PXR_PlatformSetting.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Features\PXR_FoveationRendering.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\PXR_ProjectSetting.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Features\PXR_EyeTracking.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\PXR_Settings.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\InputSystem\DeviceLayouts.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\PXR_PassThroughSystem.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Features\PXR_PassThrough.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\PXR_Manager.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Features\PXR_System.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Utils\UIEvent\PXR_UICanvas.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Utils\PXR_ObjImporter.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Controller\PXR_TouchPadEffects.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Achievement\PXR_Callback.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Achievement\PXR_AchievementDefinition.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\PXR_OverlayManager.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Features\PXR_FoveationRendering.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Achievement\PXR_DeserializableList.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Achievement\PXR_CallbackRunner.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Features\PXR_FPS.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\PXR_ProjectSetting.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Controller\PXR_ControllerKeyTips.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Payment\PicoPaymentSDK.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Utils\UIEvent\PXR_UIGraphicRaycaster.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Payment\LoadingRatation.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Utils\UIEvent\PXR_UIDraggableItem.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\PXR_Usages.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Features\PXR_Input.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\PXR_Loader.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Features\PXR_EyeTracking.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\PXR_Plugins.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Features\PXR_Boundary.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\PXR_SQPLoader.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Payment\DemoController.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Payment\LoginSDK.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Achievement\PXR_AchievementUpdate.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\PXR_Settings.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Features\PXR_OverLay.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Controller\PXR_ControllerLoader.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Controller\PXR_ControllerKeyEffects.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Payment\Callback.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\InputSystem\DeviceLayouts.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Utils\UIEvent\PXR_InputModule.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\PXR_PassThroughSystem.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Achievement\PXR_AchievementAPI.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Achievement\PXR_Message.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Achievement\PXR_Achievement.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Features\PXR_PassThrough.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\PXR_Manager.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Utils\UIEvent\PXR_EnumFlags.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Achievement\PXR_Request.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\PXR_PlatformSetting.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Features\PXR_System.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\PXR_OverlayExternalSurfaceDemo.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Controller\PXR_ControllerBattery.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Utils\UIEvent\PXR_UICanvas.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Utils\PXR_ObjImporter.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Utils\UIEvent\PXR_UIPointer.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Controller\PXR_TouchPadEffects.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Utils\UIEvent\PXR_EnumFlagsAttributeDrawer.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Achievement\PXR_Callback.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Payment\CommonDic.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Payment\InputManager.cs" />
-    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Utils\UIEvent\PXR_UIDropZone.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\PXR_PassThroughDescriptor.cs" />
     <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Features\PXR_ScreenFade.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Payment\LoadingRatation.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Utils\UIEvent\PXR_UIDraggableItem.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\PXR_SQPLoader.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Achievement\PXR_AchievementUpdate.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Controller\PXR_ControllerLoader.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Payment\Callback.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\PXR_OverlayExternalSurfaceDemo.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Utils\UIEvent\PXR_UIPointer.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Utils\UIEvent\PXR_EnumFlagsAttributeDrawer.cs" />
+    <Compile Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Scripts\Utils\UIEvent\PXR_UIDropZone.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PicoXR_Platform_SDK-1.2.5_B81\Runtime\Unity.XR.PicoXR.asmdef" />
@@ -340,6 +340,9 @@
     <Reference Include="UnityEditor.UWP.Extensions">
       <HintPath>C:\Unity 2020.3.34f1\Editor\2020.3.34f1\Editor\Data\PlaybackEngines\MetroSupport\UnityEditor.UWP.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
     <Reference Include="StarterAssetsPackageChecker">
       <HintPath>Assets\StarterAssets\Editor\PackageChecker\StarterAssetsPackageChecker.dll</HintPath>
     </Reference>
@@ -352,14 +355,11 @@
     <Reference Include="log4netPlastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
-    <Reference Include="unityplastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-    </Reference>
     <Reference Include="LitJson">
       <HintPath>PicoXR_Platform_SDK-1.2.5_B81\Runtime\Android\LitJson.dll</HintPath>
     </Reference>
-    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
-      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    <Reference Include="unityplastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Unity 2020.3.34f1\Editor\2020.3.34f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
