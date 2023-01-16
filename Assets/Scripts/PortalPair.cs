@@ -24,14 +24,42 @@ public class PortalPair : MonoBehaviour
 
     public void createPortal(int id, Transform parentTransform, Vector3 position, Quaternion rotation)
     {
+
         GameObject portal = getPortalObject(id);
+        GameObject other = getPortalObject(1 - id);
+
+        MeshRenderer portalMesh = portal.GetComponent<MeshRenderer>();
+        MeshRenderer otherPortalMesh = other.GetComponent<MeshRenderer>();
+
+        portal.SetActive(true);
+        if (other.activeInHierarchy)
+        {
+            portalMesh.sharedMaterial.SetFloat("_isTextured", 1.0f);
+            otherPortalMesh.sharedMaterial.SetFloat("_isTextured", 1.0f);
+        }
+        else
+        {
+            portalMesh.sharedMaterial.SetFloat("_isTextured", 0.0f);
+            otherPortalMesh.sharedMaterial.SetFloat("_isTextured", 0.0f);
+        }
+
+        MeshRenderer surfaceMesh = parentTransform.parent.gameObject.GetComponent<MeshRenderer>();
+        if (surfaceMesh.bounds.size.x < portalMesh.bounds.size.x || surfaceMesh.bounds.size.y < surfaceMesh.bounds.size.y)
+            return;
+
         portal.transform.parent = parentTransform;
         portal.transform.position = position;
+
+        float xPos = portal.transform.localPosition.x;
+        float yPos = portal.transform.localPosition.y;
+        if (xPos - portalMesh.bounds.size.x / 2.0f < -surfaceMesh.bounds.size.x / 2.0f) xPos = -surfaceMesh.bounds.size.x / 2.0f + portalMesh.bounds.size.x / 2.0f;
+        if (xPos + portalMesh.bounds.size.x / 2.0f > surfaceMesh.bounds.size.x / 2.0f) xPos = surfaceMesh.bounds.size.x / 2.0f - portalMesh.bounds.size.x / 2.0f;
+        if (yPos - portalMesh.bounds.size.y / 2.0f < -surfaceMesh.bounds.size.y / 2.0f) yPos = -surfaceMesh.bounds.size.y / 2.0f + portalMesh.bounds.size.y / 2.0f;
+        if (yPos + portalMesh.bounds.size.y / 2.0f > surfaceMesh.bounds.size.y / 2.0f) yPos = surfaceMesh.bounds.size.y / 2.0f - portalMesh.bounds.size.y / 2.0f;
+        portal.transform.localPosition = new Vector3(xPos, yPos, portal.transform.localPosition.z);
         portal.transform.rotation = rotation;
         portal.SetActive(true);
     }
-
-
 
     public void deletePortal(int id)
     {

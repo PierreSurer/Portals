@@ -10,20 +10,33 @@ public class PortalCreator : MonoBehaviour
     private InputAction leftClick;
     private InputAction rightClick;
     private Camera viewCamera;
-    private LayerMask hitLayer;
 
-    void Awake()
+    private LayerMask hitLayer;
+    private LayerMask blueBlockLayer;
+    private LayerMask redBlockLayer;
+
+    void Start()
     {
         viewCamera = GetComponent<Camera>();
 
         hitLayer = LayerMask.GetMask("Portal Surface");
+        blueBlockLayer = LayerMask.GetMask("Blue Ray Blocker");
+        redBlockLayer = LayerMask.GetMask("Red Ray Blocker");
+
+        Physics.IgnoreLayerCollision(6, 0, true);//Ray blocker
+        Physics.IgnoreLayerCollision(7, 0, true);//Ray blocker
+
+
         leftClick = new InputAction(binding: "<Mouse>/leftButton");
         leftClick.performed += left => {
             RaycastHit hit;
             Vector3 coor = Mouse.current.position.ReadValue();
             if (Physics.Raycast(viewCamera.ScreenPointToRay(coor), out hit, Mathf.Infinity, hitLayer))
             {
-                createPortal(0, hit);
+                RaycastHit hit2;
+                if (!Physics.Raycast(viewCamera.ScreenPointToRay(coor), out hit2, Mathf.Infinity, blueBlockLayer) ||
+                hit2.transform.parent.gameObject != pair.getPortalObject(1))
+                    createPortal(0, hit);
             }
 
         };
@@ -36,46 +49,22 @@ public class PortalCreator : MonoBehaviour
             Vector3 coor = Mouse.current.position.ReadValue();
             if (Physics.Raycast(viewCamera.ScreenPointToRay(coor), out hit, Mathf.Infinity, hitLayer))
             {
-                createPortal(1, hit);
+                RaycastHit hit2;
+                if (!Physics.Raycast(viewCamera.ScreenPointToRay(coor), out hit2, Mathf.Infinity, redBlockLayer) ||
+                hit2.transform.parent.gameObject != pair.getPortalObject(0))
+                    createPortal(1, hit);
             }
         };
         rightClick.Enable();
     }
 
-    bool createPortal(int id, RaycastHit hit)
+    void createPortal(int id, RaycastHit hit)
     {
-        MeshRenderer surfaceMesh = hit.transform.gameObject.GetComponent<MeshRenderer>();
-        MeshRenderer portalMesh = pair.getPortalObject(id).GetComponent<MeshRenderer>();
-
-        pair.getPortalObject(id).gameObject.SetActive(true);
-        if (pair.getPortalObject(1 - id).gameObject.activeInHierarchy)
-        {
-            MeshRenderer otherPortalMesh = pair.getPortalObject(1-id).GetComponent<MeshRenderer>();
-            portalMesh.sharedMaterial.SetFloat("_isTextured", 1.0f);
-            otherPortalMesh.sharedMaterial.SetFloat("_isTextured", 1.0f);
-        }else
-        {
-            MeshRenderer otherPortalMesh = pair.getPortalObject(1 - id).GetComponent<MeshRenderer>();
-            portalMesh.sharedMaterial.SetFloat("_isTextured", 0.0f);
-            otherPortalMesh.sharedMaterial.SetFloat("_isTextured", 0.0f);
-        }
-
-
         Vector3 position = hit.point + 0.01f * hit.normal;
         Quaternion rotation = Quaternion.LookRotation(-hit.normal, Vector3.up);
 
-        Vector3 offset = new Vector3();
-        float xPos = (1.0f - hit.textureCoord2.x) * surfaceMesh.bounds.size.x;
-        float yPos = (1.0f - hit.textureCoord2.y) * surfaceMesh.bounds.size.y;
-        if (xPos - portalMesh.bounds.size.x / 2.0f < 0.0f) offset.x = portalMesh.bounds.size.x / 2.0f - xPos;
-        if (xPos + portalMesh.bounds.size.x / 2.0f > surfaceMesh.bounds.size.x) offset.x = surfaceMesh.bounds.size.x - (xPos + portalMesh.bounds.size.x / 2.0f);
-        if (yPos - portalMesh.bounds.size.y / 2.0f < 0.0f) offset.y = portalMesh.bounds.size.y / 2.0f - yPos;
-        if (yPos + portalMesh.bounds.size.y / 2.0f > surfaceMesh.bounds.size.y) offset.y = surfaceMesh.bounds.size.y - (yPos + portalMesh.bounds.size.y / 2.0f);
-        position += rotation * offset;
         pair.createPortal(id, hit.transform, position, rotation);
 
-        hit.transform.gameObject.GetComponent<MeshModifier>().calculateMesh();
-
-        return true;
+        hit.transform.gameObject.GetComponent<PortalCollidable>().calculateMesh();
     }
 }
