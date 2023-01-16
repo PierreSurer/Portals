@@ -23,9 +23,6 @@ public class PortalCreator : MonoBehaviour
         blueBlockLayer = LayerMask.GetMask("Blue Ray Blocker");
         redBlockLayer = LayerMask.GetMask("Red Ray Blocker");
 
-        Physics.IgnoreLayerCollision(6, 0, true);//Ray blocker
-        Physics.IgnoreLayerCollision(7, 0, true);//Ray blocker
-
 
         leftClick = new InputAction(binding: "<Mouse>/leftButton");
         leftClick.performed += left => {

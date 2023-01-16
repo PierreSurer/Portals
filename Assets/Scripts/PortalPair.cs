@@ -31,11 +31,14 @@ public class PortalPair : MonoBehaviour
         MeshRenderer portalMesh = portal.GetComponent<MeshRenderer>();
         MeshRenderer otherPortalMesh = other.GetComponent<MeshRenderer>();
 
-        portal.SetActive(true);
+        if(portal.activeInHierarchy)
+            portal.transform.parent.gameObject.GetComponent<PortalCollidable>().calculateMesh();
+
         if (other.activeInHierarchy)
         {
             portalMesh.sharedMaterial.SetFloat("_isTextured", 1.0f);
             otherPortalMesh.sharedMaterial.SetFloat("_isTextured", 1.0f);
+            other.transform.parent.gameObject.GetComponent<PortalCollidable>().calculateMesh();
         }
         else
         {
