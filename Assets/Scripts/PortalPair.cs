@@ -68,6 +68,11 @@ public class PortalPair : MonoBehaviour
     {
         getPortalObject(id).SetActive(false);
     }
+
+    public bool isActive()
+    {
+        return redPortalObject.activeInHierarchy && bluePortalObject.activeInHierarchy;
+    }
 }
 
 

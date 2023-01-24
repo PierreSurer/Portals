@@ -154,9 +154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e8e0c7b91cc4264b810ffe7636fb7b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallCollider: {fileID: 0}
-  selfCollider: {fileID: 0}
-  generatedMesh: {fileID: 0}
 --- !u!23 &74138268
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -213,14 +210,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74138266}
-  m_LocalRotation: {x: -0.49745896, y: -0.47355032, z: -0.38033617, w: 0.61937803}
+  m_LocalRotation: {x: -0.5617359, y: -0.42947963, z: -0.42947963, w: 0.5617359}
   m_LocalPosition: {x: -8, y: 4.91, z: 12.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1258809085}
   m_Father: {fileID: 0}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: -77.54, y: -74.8, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: -74.8, z: 0}
 --- !u!1 &104307511
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,6 +232,7 @@ GameObject:
   - component: {fileID: 104307514}
   - component: {fileID: 104307513}
   - component: {fileID: 104307512}
+  - component: {fileID: 104307518}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -463,12 +461,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104307511}
   m_LocalRotation: {x: -0.20172404, y: 0.044513844, z: 0.009177871, w: 0.9783873}
-  m_LocalPosition: {x: -0.3, y: 2.88, z: 11}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.03, y: 4.94, z: 14.6}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -23.3, y: 5.21, z: 0}
+--- !u!114 &104307518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104307511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41955f7c6be57b04089c093fb76a3a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pair: {fileID: 888812883}
 --- !u!1 &210370475
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,7 +1227,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 667159463}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.726, y: 20.27, z: -5.976}
+  m_LocalPosition: {x: 1.02, y: 20.27, z: -5.976}
   m_LocalScale: {x: 2.0055, y: 3.4562898, z: 1}
   m_Children:
   - {fileID: 2001866205}
@@ -2439,9 +2450,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e8e0c7b91cc4264b810ffe7636fb7b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallCollider: {fileID: 0}
-  selfCollider: {fileID: 0}
-  generatedMesh: {fileID: 0}
 --- !u!1 &1764283028
 GameObject:
   m_ObjectHideFlags: 0

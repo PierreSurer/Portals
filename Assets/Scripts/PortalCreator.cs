@@ -57,7 +57,7 @@ public class PortalCreator : MonoBehaviour
 
     void createPortal(int id, RaycastHit hit)
     {
-        Vector3 position = hit.point + 0.01f * hit.normal;
+        Vector3 position = hit.point + 0.0001f * hit.normal;
         Quaternion rotation = Quaternion.LookRotation(-hit.normal, Vector3.up);
 
         pair.createPortal(id, hit.transform, position, rotation);
