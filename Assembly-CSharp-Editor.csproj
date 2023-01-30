@@ -53,15 +53,11 @@
     <UnityVersion>2020.3.34f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\StarterAssets\Editor\FirstPersonStarterAssetsDeployMenu.cs" />
-    <Compile Include="Assets\StarterAssets\Editor\StarterAssetsDeployMenu.cs" />
-    <Compile Include="Assets\StarterAssets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\StarterAssets\Editor\PackageChecker\StarterAssetsPackageChecker.dll" />
+    <Compile Include="Assets\Pocket Portal VR\Editor\SubdividedCubeEditor.cs" />
+    <Compile Include="Assets\Pocket Portal VR\Editor\DefineManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -297,12 +293,6 @@
     </Reference>
     <Reference Include="UnityEditor.UWP.Extensions">
       <HintPath>C:\Unity 2020.3.34f1\Editor\2020.3.34f1\Editor\Data\PlaybackEngines\MetroSupport\UnityEditor.UWP.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
-      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
-    </Reference>
-    <Reference Include="StarterAssetsPackageChecker">
-      <HintPath>Assets\StarterAssets\Editor\PackageChecker\StarterAssetsPackageChecker.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
@@ -694,6 +684,9 @@
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.XR.Interaction.Toolkit">
+      <HintPath>Library\ScriptAssemblies\Unity.XR.Interaction.Toolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Subsystem.Registration">
       <HintPath>Library\ScriptAssemblies\Unity.Subsystem.Registration.dll</HintPath>
     </Reference>
@@ -715,6 +708,12 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.CoreUtils.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.XR.CoreUtils.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Cinemachine">
       <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
     </Reference>
@@ -724,8 +723,14 @@
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
       <HintPath>Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Mobile.AndroidLogcat.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Mobile.AndroidLogcat.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.CoreUtils">
+      <HintPath>Library\ScriptAssemblies\Unity.XR.CoreUtils.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
       <HintPath>Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
@@ -733,26 +738,14 @@
     <Reference Include="Unity.XR.Management">
       <HintPath>Library\ScriptAssemblies\Unity.XR.Management.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.Interaction.Toolkit">
-      <HintPath>Library\ScriptAssemblies\Unity.XR.Interaction.Toolkit.dll</HintPath>
+    <Reference Include="Unity.Mathematics.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Interaction.Toolkit.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.Interaction.Toolkit.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.XR.CoreUtils">
-      <HintPath>Library\ScriptAssemblies\Unity.XR.CoreUtils.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.CoreUtils.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.XR.CoreUtils.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+    <Reference Include="UnityEditor.SpatialTracking">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

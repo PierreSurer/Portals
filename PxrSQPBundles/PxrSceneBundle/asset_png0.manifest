@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 156922778
+CRC: 1454642975
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 71c4b73a35b45dec6dcfae4ded50a67e
+    Hash: 558e77b82e209bdc52f62ef2e9a64967
   TypeTreeHash:
     serializedVersion: 2
     Hash: b0363f7088f9761414f730641bf9a24b
@@ -13,8 +13,6 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/Textures/PortalFlowmap3.png
 - Assets/Textures/PortalGradient.png
 - Assets/Textures/PortalFlowmap1.png
-- Packages/com.unity.cinemachine/Editor/EditorResources/cm_logo_sm.png
 Dependencies: []
