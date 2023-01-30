@@ -59,10 +59,10 @@ public class PortalPair : MonoBehaviour
 
         float xPos = portal.transform.localPosition.x;
         float yPos = portal.transform.localPosition.y;
-        if (xPos - portalMesh.bounds.size.x / 2.0f < -surfaceMesh.bounds.size.x / 2.0f) xPos = -surfaceMesh.bounds.size.x / 2.0f + portalMesh.bounds.size.x / 2.0f;
-        if (xPos + portalMesh.bounds.size.x / 2.0f > surfaceMesh.bounds.size.x / 2.0f) xPos = surfaceMesh.bounds.size.x / 2.0f - portalMesh.bounds.size.x / 2.0f;
-        if (yPos - portalMesh.bounds.size.y / 2.0f < -surfaceMesh.bounds.size.y / 2.0f) yPos = -surfaceMesh.bounds.size.y / 2.0f + portalMesh.bounds.size.y / 2.0f;
-        if (yPos + portalMesh.bounds.size.y / 2.0f > surfaceMesh.bounds.size.y / 2.0f) yPos = surfaceMesh.bounds.size.y / 2.0f - portalMesh.bounds.size.y / 2.0f;
+        //if (xPos - portalMesh.bounds.size.x / 2.0f < -surfaceMesh.bounds.size.x / 2.0f) xPos = -surfaceMesh.bounds.size.x / 2.0f + portalMesh.bounds.size.x / 2.0f;
+        //if (xPos + portalMesh.bounds.size.x / 2.0f > surfaceMesh.bounds.size.x / 2.0f) xPos = surfaceMesh.bounds.size.x / 2.0f - portalMesh.bounds.size.x / 2.0f;
+        //if (yPos - portalMesh.bounds.size.y / 2.0f < -surfaceMesh.bounds.size.y / 2.0f) yPos = -surfaceMesh.bounds.size.y / 2.0f + portalMesh.bounds.size.y / 2.0f;
+        //if (yPos + portalMesh.bounds.size.y / 2.0f > surfaceMesh.bounds.size.y / 2.0f) yPos = surfaceMesh.bounds.size.y / 2.0f - portalMesh.bounds.size.y / 2.0f;
         portal.transform.localPosition = new Vector3(xPos, yPos, portal.transform.localPosition.z);
         portal.transform.rotation = rotation;
         portal.SetActive(true);

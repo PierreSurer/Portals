@@ -59,6 +59,8 @@
     <Compile Include="Assets\Scripts\PortalCollidable.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
     <Compile Include="Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
+    <Compile Include="Assets\Scripts\PortalTransfer.cs" />
+    <Compile Include="Assets\Scripts\MovableObject.cs" />
     <Compile Include="Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
@@ -69,8 +71,7 @@
     <Compile Include="Assets\StarterAssets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\PortalPair.cs" />
     <Compile Include="Assets\Scripts\PortalCamera.cs" />
-    <Compile Include="Assets\Scripts\MovableObject.cs" />
-    <Compile Include="Assets\Scripts\PortalTransfer.cs" />
+    <Compile Include="Assets\Scripts\PhysicalButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\PortalShader.shader" />
@@ -695,6 +696,9 @@
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
       <HintPath>Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mobile.AndroidLogcat.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Mobile.AndroidLogcat.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
