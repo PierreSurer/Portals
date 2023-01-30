@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PortalCreator : MonoBehaviour
 {
     public PortalPair pair;
+    public UnityEngine.XR.InputDevice device;
 
     private InputAction leftClick;
     private InputAction rightClick;
@@ -23,6 +24,7 @@ public class PortalCreator : MonoBehaviour
         blueBlockLayer = LayerMask.GetMask("Blue Ray Blocker");
         redBlockLayer = LayerMask.GetMask("Red Ray Blocker");
 
+       
 
         leftClick = new InputAction(binding: "<Mouse>/leftButton");
         leftClick.performed += left => {

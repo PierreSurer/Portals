@@ -70,7 +70,7 @@
     <Compile Include="Assets\Scripts\PortalPair.cs" />
     <Compile Include="Assets\Scripts\PortalCamera.cs" />
     <Compile Include="Assets\Scripts\MovableObject.cs" />
-    <Compile Include="Assets\Scripts\PortalTraveler.cs" />
+    <Compile Include="Assets\Scripts\PortalTransfer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\PortalShader.shader" />

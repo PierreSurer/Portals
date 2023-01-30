@@ -31,9 +31,6 @@ public class PortalPair : MonoBehaviour
         MeshRenderer portalMesh = portal.GetComponent<MeshRenderer>();
         MeshRenderer otherPortalMesh = other.GetComponent<MeshRenderer>();
 
-        if(portal.activeInHierarchy)
-            portal.transform.parent.gameObject.GetComponent<PortalCollidable>().calculateMesh();
-
         if (other.activeInHierarchy)
         {
             portalMesh.sharedMaterial.SetFloat("_isTextured", 1.0f);
@@ -50,7 +47,14 @@ public class PortalPair : MonoBehaviour
         if (surfaceMesh.bounds.size.x < portalMesh.bounds.size.x || surfaceMesh.bounds.size.y < surfaceMesh.bounds.size.y)
             return;
 
-        portal.transform.parent = parentTransform;
+        if (portal.activeInHierarchy)
+        {
+            Transform oldParent = portal.transform.parent;
+            portal.transform.parent = parentTransform;
+            oldParent.gameObject.GetComponent<PortalCollidable>().calculateMesh();
+        }
+        else
+            portal.transform.parent = parentTransform;
         portal.transform.position = position;
 
         float xPos = portal.transform.localPosition.x;

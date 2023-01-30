@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 1496757332
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 31876a7dbf014c025a0bf86fe9e22acc
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 68c985bf88fecc38b460cdb825182138
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Shaders/PortalShader.shader
+Dependencies: []

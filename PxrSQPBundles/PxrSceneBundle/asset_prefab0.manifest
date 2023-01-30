@@ -1,0 +1,40 @@
+ManifestFileVersion: 0
+CRC: 3894371425
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9cacdbc79181d7b229e88d0189d8ecfa
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: aae07c2c482f6b70afc29194c601320f
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 81
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 19008162131b995449d42d09f348fd52, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Cinemachine
+  ClassName: Cinemachine.CinemachineBlendDefinition
+- AssemblyName: Cinemachine
+  ClassName: Cinemachine.CinemachineBrain/BrainEvent
+- AssemblyName: Cinemachine
+  ClassName: Cinemachine.CinemachineBrain/VcamActivatedEvent
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.PersistentCallGroup
+Assets:
+- Assets/Prefabs/PortalCollidable 1.prefab
+- Assets/StarterAssets/FirstPersonController/Prefabs/MainCamera.prefab
+Dependencies: []

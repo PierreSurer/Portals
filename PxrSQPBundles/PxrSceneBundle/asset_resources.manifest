@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 4040068845
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 2d10ffe8623cf317138adc4b221626e4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: d6b7564dab1af51175dfbbdd8782c200
+HashAppended: 0
+ClassTypes:
+- Class: 114
+  Script: {fileID: 11500000, guid: 191492db6e452eb468b95433ec162164, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 690929a59dc7a42da9030305190d391f, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/XRI/Settings/Resources/XRDeviceSimulatorSettings.asset
+- Assets/XRI/Settings/Resources/InteractionLayerSettings.asset
+Dependencies: []
