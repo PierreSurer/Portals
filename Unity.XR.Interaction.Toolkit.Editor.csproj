@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2e297ad5-4d02-935b-c6d6-3abbb8986ca8}</ProjectGuid>
+    <ProjectGuid>{1bc0177d-14be-3384-3486-6f4206e936ed}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Unity.VSCode.Editor</AssemblyName>
+    <AssemblyName>Unity.XR.Interaction.Toolkit.Editor</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2020_3_34;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_LINUX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;STARTER_ASSETS_PACKAGES_CHECKED;ROSLYN_ANALYZER_FIX;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;NET_STANDARD_2_0</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2020_3_34;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_LINUX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;STARTER_ASSETS_PACKAGES_CHECKED;INPUT_SYSTEM_1_1_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;NET_STANDARD_2_0</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -36,15 +36,83 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/VSCodeDiscovery.cs" />
-     <Compile Include="Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/ProjectGeneration/StringUtils.cs" />
-     <Compile Include="Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/ProjectGeneration/GUIDGenerator.cs" />
-     <Compile Include="Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/ProjectGeneration/ProjectGeneration.cs" />
-     <Compile Include="Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/ProjectGeneration/AssemblyNameProvider.cs" />
-     <Compile Include="Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/ProjectGeneration/FileIO.cs" />
-     <Compile Include="Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/ProjectGeneration/ProjectGenerationFlag.cs" />
-     <Compile Include="Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/VSCodeScriptEditor.cs" />
-     <None Include="Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/Unity.com.unity.vscode.Editor.asmdef" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/AR/Interactables/ARBaseGestureInteractableEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/AR/Interactables/ARTranslationInteractableEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Transformers/XRDualGrabFreeTransformerEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/SettingsProvider/XRInteractionEditorSettings.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Interactors/XRGazeInteractorEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Datums/ColorAffordanceThemeDatumPropertyDrawer.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Utilities/ScriptableSettings/ScriptableSettingsInitializer.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/AR/Interactables/ARAnnotationInteractableEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Layers/InteractionLayerSettingsEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Interactables/XRBaseInteractableEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Controllers/XRBaseControllerEditor.deprecated.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/ProjectValidation/XRInteractionProjectValidation.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/SettingsProvider/XRInteractionToolkitSettingsProvider.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Controllers/ActionBasedControllerEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Debugger/XRInteractionDebuggerWindow.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Interactors/Visual/XRInteractorReticleVisualEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/ProjectValidation/XRInteractionProjectValidationRulesSetup.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Datums/FloatAffordanceThemeDatumPropertyDrawer.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Interactors/XRRayInteractorEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Debugger/XRInputDevicesTreeView.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Locomotion/SnapTurn/DeviceBasedSnapTurnProviderEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Interactors/XRSocketInteractorEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Datums/AudioAffordanceThemeDatumPropertyDrawer.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Utilities/XRInteractionEditorGUI.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Utilities/XRInteractionEditorUtility.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Utilities/ReadOnlyReorderableList.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Debugger/XRTargetEvaluatorsScoreTreeView.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Utilities/PositionHandleUtility.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/CreateUtils.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Locomotion/Teleportation/TeleportationAnchorEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/AR/Interactables/ARScaleInteractableEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Interactables/XRInteractableSnapVolumeEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Datums/Vector2AffordanceThemeDatumPropertyDrawer.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Controllers/XRControllerRecorderEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Interactables/XRGrabInteractableEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Filtering/Target/XRTargetEvaluatorList.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Layers/InteractionLayerUpdater.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Layers/InteractionLayerMaskDrawer.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Inputs/Simulation/XRDeviceSimulatorEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Interactors/Visual/XRInteractorLineVisualEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/XRMainCameraFactory.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Datums/Vector3AffordanceThemeDatumPropertyDrawer.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/XR/XRRigEditor.deprecated.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Filtering/Poke/PokeThresholdDatumPropertyDrawer.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/BaseInteractionEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Controllers/XRControllerRecordingEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/AR/Interactors/ARGestureInteractorEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Controllers/XRBaseControllerEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Inputs/Simulation/XRDeviceSimulatorSettingsEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/EventMigrationUtility.deprecated.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Debugger/XRTargetFiltersTreeView.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Interactors/XRBaseControllerInteractorEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Utilities/ScriptableSettings/EditorScriptableSettings.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Utilities/XRTargetEvaluatorEditorUtility.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Filtering/Target/XRTargetFilterEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Filtering/Target/XRTargetEvaluatorEnabledDrawer.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Debugger/XRInteractablesTreeView.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/SettingsProvider/XRInteractionEditorSettingsEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Interactors/XRDirectInteractorEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Locomotion/Teleportation/TeleportationAreaEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/AssemblyInfo.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Interactors/XRBaseInteractorEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Controllers/XRControllerEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Interactors/XRBaseInteractorEditor.deprecated.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/XRInteractionManagerEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Utilities/PackageManagerEditorHelper.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/AR/Interactables/ARPlacementInteractableEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Utilities/RequireInterfaceDrawer.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Datums/Vector4AffordanceThemeDatumPropertyDrawer.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Debugger/XRInteractorsTreeView.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Interactables/XRBaseInteractableEditor.deprecated.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Locomotion/TunnelingVignetteControllerEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/AR/Interactables/ARRotationInteractableEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Interaction/Filtering/Target/XRMissingEvaluatorTypeList.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/AR/Interactables/ARSelectionInteractableEditor.cs" />
+     <Compile Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Locomotion/Teleportation/BaseTeleportationInteractableEditor.cs" />
+     <None Include="Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.0-pre.1/Editor/Unity.XR.Interaction.Toolkit.Editor.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>/home/mathis/Unity/Hub/Editor/2020.3.34f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -644,6 +712,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.csproj">
+      <Project>{acc8f63c-b38f-fac2-ae80-ef298a396a03}</Project>
+      <Name>Unity.XR.Interaction.Toolkit</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.SpatialTracking.csproj">
+      <Project>{916b02b1-0f38-8e6d-e1cd-68c6a0802c0c}</Project>
+      <Name>UnityEngine.SpatialTracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.InputSystem.csproj">
+      <Project>{97300d30-dd80-f073-8b02-8de71a11a09c}</Project>
+      <Name>Unity.InputSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.CoreUtils.csproj">
+      <Project>{8d6f80bf-1e4e-b3c4-59dd-7573ba27e67b}</Project>
+      <Name>Unity.XR.CoreUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.CoreUtils.Editor.csproj">
+      <Project>{e177668e-6f81-d9d1-d275-3f4ea5bc0d49}</Project>
+      <Name>Unity.XR.CoreUtils.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{659944bc-afc8-668d-caab-84953a8da64d}</Project>
       <Name>UnityEngine.UI</Name>
