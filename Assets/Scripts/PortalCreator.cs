@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class PortalCreator : MonoBehaviour
 {
     public PortalPair pair;
     public UnityEngine.XR.InputDevice device;
+    public XRController controller;
 
     private InputAction leftClick;
     private InputAction rightClick;
@@ -15,6 +17,9 @@ public class PortalCreator : MonoBehaviour
     private LayerMask hitLayer;
     private LayerMask blueBlockLayer;
     private LayerMask redBlockLayer;
+
+    private bool trigger; // gachette
+    private int portalId = 0;
 
     void Start()
     {
@@ -65,5 +70,28 @@ public class PortalCreator : MonoBehaviour
         pair.createPortal(id, hit.transform, position, rotation);
 
         hit.transform.gameObject.GetComponent<PortalCollidable>().calculateMesh();
+    }
+
+
+    void Update()
+    {
+        bool lastTrigger = trigger;
+        controller.inputDevice.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out trigger);
+
+        if (!lastTrigger && trigger)
+        {
+            RaycastHit hit;
+            Ray r = new Ray(controller.transform.position, controller.transform.forward);
+            if (Physics.Raycast(r, out hit, Mathf.Infinity, hitLayer))
+            {
+                RaycastHit hit2;
+                if (!Physics.Raycast(r, out hit2, Mathf.Infinity, redBlockLayer) || hit2.transform.parent.gameObject != pair.getPortalObject(0))
+                {
+                    createPortal(portalId, hit);
+                    portalId = (portalId + 1) % 2;
+                }
+            }
+        }
+        Debug.Log(trigger);
     }
 }
