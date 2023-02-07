@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 156922778
+CRC: 1454518930
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 71c4b73a35b45dec6dcfae4ded50a67e
+    Hash: 7b615b211d3c8724745d4e1673e9f283
   TypeTreeHash:
     serializedVersion: 2
     Hash: b0363f7088f9761414f730641bf9a24b
@@ -13,8 +13,11 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/Textures/PortalFlowmap3.png
+- Assets/Textures/Doors_Doors_AlbedoTransparency.png
+- Packages/com.unity.inputsystem/InputSystem/Editor/Icons/TrackedPoseDriver@4x.png
+- Assets/Textures/Doors_Doors_AO.png
 - Assets/Textures/PortalGradient.png
 - Assets/Textures/PortalFlowmap1.png
-- Packages/com.unity.cinemachine/Editor/EditorResources/cm_logo_sm.png
+- Assets/Textures/Doors_Doors_MetallicSmoothness.png
+- Assets/Textures/Doors_Doors_Normal.png
 Dependencies: []

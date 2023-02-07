@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2489667407
+CRC: 4248602968
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6a0bf100a170522a75f2d6c590c60cd0
+    Hash: dfb30afedede80ff6135ed84b0576894
   TypeTreeHash:
     serializedVersion: 2
     Hash: ddfde9a2fc11de291cc1a5901c25d19f
@@ -19,10 +19,12 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/Materials/PortalFlowmap3.mat
+- Assets/Materials/RedPortalInside.mat
+- Assets/Materials/BluePortalInside.mat
 - Assets/Materials/BluePortal.mat
+- Assets/Materials/Sci Fi Doors Mat.mat
 - Assets/Materials/RedPortal.mat
 Dependencies:
-- C:/Users/psurer/Documents/repos/Portals/PxrSQPBundles/PxrSceneBundle/asset_png0
-- C:/Users/psurer/Documents/repos/Portals/PxrSQPBundles/PxrSceneBundle/asset_rendertexture0
-- C:/Users/psurer/Documents/repos/Portals/PxrSQPBundles/PxrSceneBundle/asset_shader0
+- C:/Users/mbrossi/Desktop/Portals/PxrSQPBundles/PxrSceneBundle/asset_png0
+- C:/Users/mbrossi/Desktop/Portals/PxrSQPBundles/PxrSceneBundle/asset_rendertexture0
+- C:/Users/mbrossi/Desktop/Portals/PxrSQPBundles/PxrSceneBundle/asset_shader0

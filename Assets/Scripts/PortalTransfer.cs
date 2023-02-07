@@ -30,20 +30,21 @@ public class PortalTransfer : MonoBehaviour
     {
         if (clone) // move clone
         {
-            Vector3 relativePos = otherPortal.transform.worldToLocalMatrix * (otherPortal.transform.position - transform.position);
+                Matrix4x4 rotate = Matrix4x4.Rotate(new Quaternion(0, 1, 0, 0));
+                Matrix4x4 localTransform = otherPortal.transform.worldToLocalMatrix * transform.localToWorldMatrix;
+                Matrix4x4 globalTransform = (clonePortal.transform.localToWorldMatrix * rotate) * localTransform;
+                clone.transform.SetPositionAndRotation(globalTransform.GetColumn(3), globalTransform.rotation);
 
-            if (relativePos.z < -0.1)
-            {
-                transform.position = clone.transform.position;
-                transform.rotation = clone.transform.rotation;
+                Vector3 relativePos = otherPortal.transform.worldToLocalMatrix * (otherPortal.transform.position - transform.position);
 
-                (clonePortal, otherPortal) = (otherPortal, clonePortal);
-            }
+                // swap object and clone if it went through the portal
+                if (relativePos.z < -0.1)
+                {
+                    (transform.position, clone.transform.position) = (clone.transform.position, transform.position);
+                    (transform.rotation, clone.transform.rotation) = (clone.transform.rotation, transform.rotation);
+                    (clonePortal, otherPortal) = (otherPortal, clonePortal);
+                }
 
-            Matrix4x4 rotate = Matrix4x4.Rotate(new Quaternion(0, 1, 0, 0));
-            Matrix4x4 localTransform = otherPortal.transform.worldToLocalMatrix * transform.localToWorldMatrix;
-            Matrix4x4 globalTransform = (clonePortal.transform.localToWorldMatrix * rotate) * localTransform;
-            clone.transform.SetPositionAndRotation(globalTransform.GetColumn(3), globalTransform.rotation);
 
             if (!hit)
             {

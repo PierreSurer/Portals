@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1496757332
+CRC: 2862407247
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 31876a7dbf014c025a0bf86fe9e22acc
+    Hash: 57cdd8b03bd0642c88c4adad4b31bad4
   TypeTreeHash:
     serializedVersion: 2
     Hash: 68c985bf88fecc38b460cdb825182138
@@ -14,4 +14,5 @@ ClassTypes:
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/Shaders/PortalShader.shader
+- Assets/Shaders/PortalInsideShader.shader
 Dependencies: []
