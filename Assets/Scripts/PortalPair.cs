@@ -31,11 +31,12 @@ public class PortalPair : MonoBehaviour
         MeshRenderer portalMesh = portal.GetComponent<MeshRenderer>();
         MeshRenderer otherPortalMesh = other.GetComponent<MeshRenderer>();
 
+        // Activate texture and portal transfer for other
         if (other.activeInHierarchy)
         {
             portalMesh.sharedMaterial.SetFloat("_isTextured", 1.0f);
             otherPortalMesh.sharedMaterial.SetFloat("_isTextured", 1.0f);
-            other.transform.parent.gameObject.GetComponent<PortalCollidable>().calculateMesh();
+            other.transform.parent.gameObject.GetComponentInChildren<PortalCollidable>().calculateMesh();
         }
         else
         {
@@ -43,29 +44,19 @@ public class PortalPair : MonoBehaviour
             otherPortalMesh.sharedMaterial.SetFloat("_isTextured", 0.0f);
         }
 
-        MeshRenderer surfaceMesh = parentTransform.parent.gameObject.GetComponent<MeshRenderer>();
-        if (surfaceMesh.bounds.size.x < portalMesh.bounds.size.x || surfaceMesh.bounds.size.y < surfaceMesh.bounds.size.y)
-            return;
-
         if (portal.activeInHierarchy)
         {
             Transform oldParent = portal.transform.parent;
             portal.transform.parent = parentTransform;
-            oldParent.gameObject.GetComponent<PortalCollidable>().calculateMesh();
+            oldParent.gameObject.GetComponentInChildren<PortalCollidable>().calculateMesh();
         }
         else
             portal.transform.parent = parentTransform;
-        portal.transform.position = position;
 
-        float xPos = portal.transform.localPosition.x;
-        float yPos = portal.transform.localPosition.y;
-        //if (xPos - portalMesh.bounds.size.x / 2.0f < -surfaceMesh.bounds.size.x / 2.0f) xPos = -surfaceMesh.bounds.size.x / 2.0f + portalMesh.bounds.size.x / 2.0f;
-        //if (xPos + portalMesh.bounds.size.x / 2.0f > surfaceMesh.bounds.size.x / 2.0f) xPos = surfaceMesh.bounds.size.x / 2.0f - portalMesh.bounds.size.x / 2.0f;
-        //if (yPos - portalMesh.bounds.size.y / 2.0f < -surfaceMesh.bounds.size.y / 2.0f) yPos = -surfaceMesh.bounds.size.y / 2.0f + portalMesh.bounds.size.y / 2.0f;
-        //if (yPos + portalMesh.bounds.size.y / 2.0f > surfaceMesh.bounds.size.y / 2.0f) yPos = surfaceMesh.bounds.size.y / 2.0f - portalMesh.bounds.size.y / 2.0f;
-        portal.transform.localPosition = new Vector3(xPos, yPos, portal.transform.localPosition.z);
+        portal.transform.position = position;
         portal.transform.rotation = rotation;
         portal.SetActive(true);
+        portal.transform.parent.gameObject.GetComponentInChildren<PortalCollidable>().calculateMesh();
     }
 
     public void deletePortal(int id)
