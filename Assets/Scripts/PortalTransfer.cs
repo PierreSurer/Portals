@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
+using System.Reflection;
 using UnityEngine;
 
 public class PortalTransfer : MonoBehaviour
@@ -67,7 +69,17 @@ public class PortalTransfer : MonoBehaviour
                     otherPortal = pair.getPortalObject(i);
 
                     clone = Instantiate(selfCollider.gameObject);
-                    clone.GetComponent<PortalTransfer>().enabled = false; //disable object behaviors
+
+                    // disable unwanted components in the clone
+                    Type[] unwantedComps = new Type[] {
+                        typeof(Camera),
+                        typeof(PortalTransfer)
+                    };
+                    foreach (Type t in unwantedComps)
+                    {
+                        foreach (Behaviour comp in clone.GetComponentsInChildren(t))
+                            comp.enabled = false;
+                    }
                 }
 
             }

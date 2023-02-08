@@ -21,7 +21,7 @@ Shader "Unlit/PortalShader"
         LOD 100
         ZWrite Off
         Blend SrcAlpha OneMinusSrcAlpha
-        Cull Off
+        // Cull Off
 
         Pass
         {

@@ -92,6 +92,5 @@ public class PortalCreator : MonoBehaviour
                 }
             }
         }
-        Debug.Log(trigger);
     }
 }
