@@ -21,8 +21,8 @@ public class PortalTransfer : MonoBehaviour
     {
         Destroy(clone);
         portals = new Collider[2];
-        portals[0] = pair.getPortalObject(0).transform.GetComponentInChildren<MeshCollider>();
-        portals[1] = pair.getPortalObject(1).transform.GetComponentInChildren<MeshCollider>();
+        portals[0] = pair.getPortalObject(0).transform.GetComponentInChildren<BoxCollider>();
+        portals[1] = pair.getPortalObject(1).transform.GetComponentInChildren<BoxCollider>();
         selfCollider = GetComponentInChildren<Collider>();
 
         hit = false;

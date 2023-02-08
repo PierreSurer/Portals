@@ -20,8 +20,8 @@ public class MovableObject : MonoBehaviour
     {
         Destroy(clone);
         portals = new Collider[2];
-        portals[0] = pair.getPortalObject(0).transform.GetComponentInChildren<MeshCollider>();
-        portals[1] = pair.getPortalObject(1).transform.GetComponentInChildren<MeshCollider>();
+        portals[0] = pair.getPortalObject(0).transform.GetComponentInChildren<BoxCollider>();
+        portals[1] = pair.getPortalObject(1).transform.GetComponentInChildren<BoxCollider>();
         selfCollider = GetComponent<Collider>();
         rigidbody = GetComponent<Rigidbody>();
 
@@ -32,21 +32,20 @@ public class MovableObject : MonoBehaviour
     {
         if (clone) // move clone
         {
-            Vector3 relativePos = otherPortal.transform.worldToLocalMatrix * (otherPortal.transform.position - transform.position);
-
-            if (relativePos.z < -0.1)
-            {
-                rigidbody.velocity = clonePortal.transform.localToWorldMatrix * (otherPortal.transform.worldToLocalMatrix * -rigidbody.velocity);
-                transform.position = clone.transform.position;
-                transform.rotation = clone.transform.rotation;
-
-                (clonePortal, otherPortal) = (otherPortal, clonePortal);
-            }
-
             Matrix4x4 rotate = Matrix4x4.Rotate(new Quaternion(0, 1, 0, 0));
             Matrix4x4 localTransform = otherPortal.transform.worldToLocalMatrix * transform.localToWorldMatrix;
             Matrix4x4 globalTransform = (clonePortal.transform.localToWorldMatrix * rotate) * localTransform;
             clone.transform.SetPositionAndRotation(globalTransform.GetColumn(3), globalTransform.rotation);
+
+            Vector3 relativePos = otherPortal.transform.worldToLocalMatrix * (otherPortal.transform.position - transform.position);
+            if (relativePos.z < -0.1)
+            {
+                rigidbody.velocity = clonePortal.transform.localToWorldMatrix * (otherPortal.transform.worldToLocalMatrix * -rigidbody.velocity);
+                (transform.position, clone.transform.position) = (clone.transform.position, transform.position);
+                (transform.rotation, clone.transform.rotation) = (clone.transform.rotation, transform.rotation);
+
+                (clonePortal, otherPortal) = (otherPortal, clonePortal);
+            }
 
             if (!hit)
             {
