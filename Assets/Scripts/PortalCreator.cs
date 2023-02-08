@@ -107,22 +107,16 @@ public class PortalCreator : MonoBehaviour
 
     void Update()
     {
-        //bool lastTrigger = trigger;
-        //controller.inputDevice.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out trigger);
+        bool lastTrigger = trigger;
+        controller.inputDevice.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out trigger);
 
         if (!lastTrigger && trigger)
         {
-            RaycastHit hit;
-            Ray r = new Ray(controller.transform.position, controller.transform.forward);
-            if (Physics.Raycast(r, out hit, Mathf.Infinity, hitLayer))
-            {
-                RaycastHit hit2;
-                if (!Physics.Raycast(r, out hit2, Mathf.Infinity, redBlockLayer) || hit2.transform.parent.gameObject != pair.getPortalObject(0))
-                {
-                    createPortal(portalId, hit);
-                    portalId = (portalId + 1) % 2;
-                }
-            }
+            Vector3 pos = controller.transform.position;
+            Vector3 dir = controller.transform.forward;
+            ShootPortal(portalId, pos, dir);
+            portalId = (portalId + 1) % 2;
+            Debug.Log("shoot portal");
         }
     }
 }
