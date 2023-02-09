@@ -68,18 +68,22 @@ public class PortalCreator : MonoBehaviour
             bool topRightValid = false;
             int correctionIt = 0;
 
-            LayerMask shootLayer = hitLayer | LayerMask.GetMask("Portal Blocker");
+            LayerMask shootLayer = hitLayer;
+            if(id == 0)
+                shootLayer = shootLayer | LayerMask.GetMask("Blue Portal Blocker");
+            else
+                shootLayer = shootLayer | LayerMask.GetMask("Red Portal Blocker");
 
             while ((!bottomLeftValid || !topLeftValid || ! bottomRightValid || !topRightValid) && correctionIt < 2 * errorCorrectionSteps)
             {
                 RaycastHit bottomLeftHit;
-                Physics.Raycast(portalPos + hit.normal * 0.001f - xProj - yProj, direction, out bottomLeftHit, 0.05f, shootLayer);
+                Physics.Raycast(portalPos + hit.normal * 0.1f - xProj - yProj, direction, out bottomLeftHit, 0.5f, shootLayer);
                 RaycastHit topLeftHit;
-                Physics.Raycast(portalPos + hit.normal * 0.001f - xProj + yProj, direction, out topLeftHit, 0.05f, shootLayer);
+                Physics.Raycast(portalPos + hit.normal * 0.1f - xProj + yProj, direction, out topLeftHit, 0.5f, shootLayer);
                 RaycastHit bottomRightHit;
-                Physics.Raycast(portalPos + hit.normal * 0.001f + xProj - yProj, direction, out bottomRightHit, 0.05f, shootLayer);
+                Physics.Raycast(portalPos + hit.normal * 0.1f + xProj - yProj, direction, out bottomRightHit, 0.5f, shootLayer);
                 RaycastHit topRightHit;
-                Physics.Raycast(portalPos + hit.normal * 0.001f + xProj + yProj, direction, out topRightHit, 0.05f, shootLayer);
+                Physics.Raycast(portalPos + hit.normal * 0.1f + xProj + yProj, direction, out topRightHit, 0.5f, shootLayer);
 
                 bottomLeftValid = bottomLeftHit.collider == hit.collider;
                 topLeftValid = topLeftHit.collider == hit.collider;

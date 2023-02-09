@@ -2116,7 +2116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pair: {fileID: 888812883}
   controller: {fileID: 0}
-  errorCorrectionSteps: 20
+  errorCorrectionSteps: 70
 --- !u!114 &1465371750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3092,7 +3092,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2132246548}
   - component: {fileID: 2132246549}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CloneTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
