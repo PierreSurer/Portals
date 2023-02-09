@@ -64,7 +64,6 @@
     <Compile Include="Assets\Scripts\PhysicalButton.cs" />
     <Compile Include="Assets\Scripts\PortalCreator.cs" />
     <Compile Include="Assets\Scripts\PortalPair.cs" />
-    <Compile Include="Assets\Scripts\PortalCamera.cs" />
     <Compile Include="Assets\Scripts\RenderablePortal.cs" />
   </ItemGroup>
   <ItemGroup>

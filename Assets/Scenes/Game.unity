@@ -1194,7 +1194,6 @@ GameObject:
   - component: {fileID: 556429322}
   - component: {fileID: 556429325}
   - component: {fileID: 556429324}
-  - component: {fileID: 556429323}
   m_Layer: 0
   m_Name: Red  Portal Camera
   m_TagString: MainCamera
@@ -1216,21 +1215,6 @@ Transform:
   m_Father: {fileID: 1846651292}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &556429323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 556429321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff59b2f239905444a7d6d219e1ec866, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCameraObj: {fileID: 2032039930317994784}
-  sourcePortalObj: {fileID: 1819810199}
-  targetPortalObj: {fileID: 591066979}
 --- !u!81 &556429324
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1246,7 +1230,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556429321}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -1294,6 +1278,7 @@ GameObject:
   - component: {fileID: 591066982}
   - component: {fileID: 591066981}
   - component: {fileID: 591066980}
+  - component: {fileID: 591066984}
   m_Layer: 0
   m_Name: Blue Portal
   m_TagString: Untagged
@@ -1402,6 +1387,20 @@ Transform:
   m_Father: {fileID: 1846651292}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &591066984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591066979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd94ca78beee6dec9bdf860a540e39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portalCamera: {fileID: 678404447}
+  targetPortal: {fileID: 1819810204}
 --- !u!1 &643121877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1448,7 +1447,6 @@ GameObject:
   - component: {fileID: 678404444}
   - component: {fileID: 678404447}
   - component: {fileID: 678404446}
-  - component: {fileID: 678404445}
   m_Layer: 0
   m_Name: Blue Portal Camera
   m_TagString: MainCamera
@@ -1471,21 +1469,6 @@ Transform:
   m_Father: {fileID: 1846651292}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &678404445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678404443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff59b2f239905444a7d6d219e1ec866, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCameraObj: {fileID: 2032039930317994784}
-  sourcePortalObj: {fileID: 591066979}
-  targetPortalObj: {fileID: 1819810199}
 --- !u!81 &678404446
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1501,7 +1484,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678404443}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -3377,6 +3360,7 @@ GameObject:
   - component: {fileID: 1819810202}
   - component: {fileID: 1819810201}
   - component: {fileID: 1819810200}
+  - component: {fileID: 1819810204}
   m_Layer: 0
   m_Name: Red Portal
   m_TagString: Untagged
@@ -3485,6 +3469,20 @@ Transform:
   m_Father: {fileID: 1846651292}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1819810204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819810199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd94ca78beee6dec9bdf860a540e39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portalCamera: {fileID: 556429325}
+  targetPortal: {fileID: 591066984}
 --- !u!1 &1827885991 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: a3034caa0e86c4a49a71b5bfb1309ca8, type: 3}
