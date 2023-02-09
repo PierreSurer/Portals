@@ -32,20 +32,20 @@ public class PortalTransfer : MonoBehaviour
     {
         if (clone) // move clone
         {
-                Matrix4x4 rotate = Matrix4x4.Rotate(new Quaternion(0, 1, 0, 0));
-                Matrix4x4 localTransform = otherPortal.transform.worldToLocalMatrix * transform.localToWorldMatrix;
-                Matrix4x4 globalTransform = (clonePortal.transform.localToWorldMatrix * rotate) * localTransform;
-                clone.transform.SetPositionAndRotation(globalTransform.GetColumn(3), globalTransform.rotation);
+            Matrix4x4 rotate = Matrix4x4.Rotate(new Quaternion(0, 1, 0, 0));
+            Matrix4x4 localTransform = otherPortal.transform.worldToLocalMatrix * transform.localToWorldMatrix;
+            Matrix4x4 globalTransform = (clonePortal.transform.localToWorldMatrix * rotate) * localTransform;
+            clone.transform.SetPositionAndRotation(globalTransform.GetColumn(3), globalTransform.rotation);
 
-                Vector3 relativePos = otherPortal.transform.worldToLocalMatrix * (otherPortal.transform.position - transform.position);
+            Vector3 relativePos = otherPortal.transform.worldToLocalMatrix * (otherPortal.transform.position - transform.position);
 
-                // swap object and clone if it went through the portal
-                if (relativePos.z < -0.1)
-                {
-                    (transform.position, clone.transform.position) = (clone.transform.position, transform.position);
-                    (transform.rotation, clone.transform.rotation) = (clone.transform.rotation, transform.rotation);
-                    (clonePortal, otherPortal) = (otherPortal, clonePortal);
-                }
+            // swap object and clone if it went through the portal
+            if (relativePos.z < 0.0f)
+            {
+                (transform.position, clone.transform.position) = (clone.transform.position, transform.position);
+                (transform.rotation, clone.transform.rotation) = (clone.transform.rotation, transform.rotation);
+                (clonePortal, otherPortal) = (otherPortal, clonePortal);
+            }
 
 
             if (!hit)
@@ -68,20 +68,11 @@ public class PortalTransfer : MonoBehaviour
                     clonePortal = pair.getPortalObject(1 - i);
                     otherPortal = pair.getPortalObject(i);
 
-                    clone = Instantiate(selfCollider.gameObject);
-
-                    // disable unwanted components in the clone
-                    Type[] unwantedComps = new Type[] {
-                        typeof(Camera),
-                        typeof(PortalTransfer)
-                    };
-                    foreach (Type t in unwantedComps)
-                    {
-                        foreach (Behaviour comp in clone.GetComponentsInChildren(t))
-                            comp.enabled = false;
-                    }
+                    // clone only the gameobject that hold the mesh
+                    clone = new GameObject();
+                    var child = Instantiate(selfCollider.GetComponentInChildren<MeshRenderer>().gameObject);
+                    child.transform.parent = clone.transform;
                 }
-
             }
         }
     }

@@ -19,8 +19,9 @@ public class PortalCreator : MonoBehaviour
 
     private LayerMask hitLayer;
 
-    private bool trigger; // gachette
-    private int portalId = 0;
+    // press de boutons
+    private bool trigger;
+    private bool menu;
 
     void Start()
     {
@@ -54,7 +55,7 @@ public class PortalCreator : MonoBehaviour
         Physics.Raycast(position, direction, out hit, distance, hitLayer);
         if(hit.collider != null)
         {
-            Vector3 portalPos = hit.point + 0.0001f * hit.normal;
+            Vector3 portalPos = hit.point + 0.01f * hit.normal;
             Quaternion portalRot = Quaternion.LookRotation(-hit.normal, Vector3.up); //TODO portal orientation with camera
 
             //Shoot rays on the corners
@@ -114,12 +115,14 @@ public class PortalCreator : MonoBehaviour
         bool lastTrigger = trigger;
         controller.inputDevice.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out trigger);
 
-        if (!lastTrigger && trigger)
+        bool lastMenu = menu;
+        controller.inputDevice.TryGetFeatureValue(UnityEngine.XR.CommonUsages.menuButton, out menu);
+
+        if (!lastTrigger && trigger || !lastMenu && menu)
         {
             Vector3 pos = controller.transform.position;
             Vector3 dir = controller.transform.forward;
-            ShootPortal(portalId, pos, dir);
-            portalId = (portalId + 1) % 2;
+            ShootPortal(trigger ? 0 : 1, pos, dir);
             Debug.Log("shoot portal");
         }
     }
