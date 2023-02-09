@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2604827968
+CRC: 1609745206
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 077ead47b52c580d98fe3bc89d98f1d4
+    Hash: 6cdf3374a4dd7e8943e83405609f081c
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 6893d17f7a813c37f4f7b51abc5be221
+    Hash: c31af75079f831b04b55fc6ad0a01bd2
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -17,15 +17,16 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 23
   Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
 - Class: 33
   Script: {instanceID: 0}
 - Class: 43
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
-- Class: 64
-  Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/Prefabs/Level.obj
-Dependencies: []
+Dependencies:
+- C:/Users/mbrossi/Desktop/Portals/PxrSQPBundles/PxrSceneBundle/asset_png0

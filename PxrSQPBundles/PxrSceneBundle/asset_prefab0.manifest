@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3179367483
+CRC: 1794034455
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 37709bd8f4095c66d6848b67e22af537
+    Hash: 1e5bcf0339dcb4a303ee55b97ac59696
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 7bee3c126c48a8961490e17d61070bd4
+    Hash: fa855e9532f183e7dad608aef619512f
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -21,17 +21,26 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 43
   Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
 - Class: 64
   Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: 19008162131b995449d42d09f348fd52, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 837b1d2bdd173984f8321faedae1e24f, type: 3}
 - Class: 115
   Script: {instanceID: 0}
-SerializeReferenceClassIdentifiers: []
+SerializeReferenceClassIdentifiers:
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.PersistentCallGroup
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.UnityEvent
 Assets:
 - Assets/Prefabs/PortalCollidable 1.prefab
 - Assets/Prefabs/Gate_Small.prefab
 - Assets/Prefabs/Sci Fi Gates.prefab
+- Assets/Prefabs/Button.prefab
 Dependencies:
 - C:/Users/mbrossi/Desktop/Portals/PxrSQPBundles/PxrSceneBundle/asset_fbx0
 - C:/Users/mbrossi/Desktop/Portals/PxrSQPBundles/PxrSceneBundle/asset_mat0

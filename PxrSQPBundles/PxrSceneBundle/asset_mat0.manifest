@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 4248602968
+CRC: 385370095
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: dfb30afedede80ff6135ed84b0576894
+    Hash: 5579692d2bc6d1ab6116d00ecbf1e31d
   TypeTreeHash:
     serializedVersion: 2
     Hash: ddfde9a2fc11de291cc1a5901c25d19f
@@ -19,12 +19,12 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/Materials/RedPortalInside.mat
-- Assets/Materials/BluePortalInside.mat
+- Packages/com.unity.xr.picoxr/Assets/Resources/plane.mat
 - Assets/Materials/BluePortal.mat
 - Assets/Materials/Sci Fi Doors Mat.mat
 - Assets/Materials/RedPortal.mat
 Dependencies:
+- C:/Users/mbrossi/Desktop/Portals/PxrSQPBundles/PxrSceneBundle/asset_jpg0
 - C:/Users/mbrossi/Desktop/Portals/PxrSQPBundles/PxrSceneBundle/asset_png0
 - C:/Users/mbrossi/Desktop/Portals/PxrSQPBundles/PxrSceneBundle/asset_rendertexture0
 - C:/Users/mbrossi/Desktop/Portals/PxrSQPBundles/PxrSceneBundle/asset_shader0
