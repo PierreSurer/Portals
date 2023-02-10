@@ -24,10 +24,10 @@ public class PortalCollidable : MonoBehaviour
         //TODO other shapes?
         _2DCollider.pathCount = 1;
         Vector2[] positions = {
-        new Vector2(5, 5),
-        new Vector2(5, -5),
-        new Vector2(-5, -5),
-        new Vector2(-5, 5)};
+        new Vector2(1, 1),
+        new Vector2(1, -1),
+        new Vector2(-1, -1),
+        new Vector2(-1, 1)};
         _2DCollider.SetPath(0, positions);
 
         if (!_3DCollider || !_2DCollider) Debug.LogError("Missing components");
@@ -49,8 +49,7 @@ public class PortalCollidable : MonoBehaviour
                 Vector2[] positions = collider.GetPath(0);
                 for (int j = 0; j < positions.Length; j++)
                 {
-                    positions[j].x *= child.transform.localScale.x;
-                    positions[j].y *= child.transform.localScale.y;
+                    positions[j] *= (Vector2)collider.transform.localScale;
                     positions[j] += (Vector2)collider.transform.localPosition;
                 }
                 _2DCollider.pathCount += 1;

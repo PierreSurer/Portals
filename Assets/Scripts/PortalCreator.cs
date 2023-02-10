@@ -55,6 +55,7 @@ public class PortalCreator : MonoBehaviour
         Physics.Raycast(position, direction, out hit, distance, hitLayer);
         if(hit.collider != null)
         {
+            Debug.Log("hello");
             Vector3 portalPos = hit.point + 0.01f * hit.normal;
             Quaternion portalRot = Quaternion.LookRotation(-hit.normal, Vector3.up); //TODO portal orientation with camera
 
