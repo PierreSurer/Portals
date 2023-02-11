@@ -44,24 +44,33 @@ public class PortalPair : MonoBehaviour
             otherPortalMesh.sharedMaterial.SetFloat("_isTextured", 0.0f);
         }
 
+        portal.transform.position = position;
+        portal.transform.rotation = rotation;
+
         if (portal.activeInHierarchy)
         {
             Transform oldParent = portal.transform.parent;
-            portal.transform.parent = parentTransform;
+            portal.transform.SetParent(parentTransform ,true);
             oldParent.gameObject.GetComponentInChildren<PortalCollidable>().calculateMesh();
         }
-        else
-            portal.transform.parent = parentTransform;
+        else {
+            portal.transform.SetParent(parentTransform, true);
+        }
 
-        portal.transform.position = position;
-        portal.transform.rotation = rotation;
         portal.SetActive(true);
         portal.transform.parent.gameObject.GetComponentInChildren<PortalCollidable>().calculateMesh();
     }
 
     public void deletePortal(int id)
     {
-        getPortalObject(id).SetActive(false);
+        GameObject portal = getPortalObject(id);
+        PortalCollidable collidable = portal.transform.parent.GetComponentInChildren<PortalCollidable>();
+
+        portal.transform.SetParent(this.transform, true);
+        portal.SetActive(false);
+
+        if (collidable)
+            collidable.calculateMesh();
     }
 
     public bool isActive()

@@ -51,16 +51,22 @@ public class PortalCreator : MonoBehaviour
 
     void ShootPortal(int id, Vector3 position, Vector3 direction, float distance = Mathf.Infinity)
     {
+        GameObject portal = pair.getPortalObject(id);
         RaycastHit hit;
         Physics.Raycast(position, direction, out hit, distance, hitLayer);
         if(hit.collider != null)
         {
-            Debug.Log("hello");
+            // remove portal from collider
+            if (portal.transform.parent == hit.transform)
+            {
+                pair.deletePortal(id);
+            }
+        
             Vector3 portalPos = hit.point + 0.01f * hit.normal;
             Quaternion portalRot = Quaternion.LookRotation(-hit.normal, Vector3.up); //TODO portal orientation with camera
 
             //Shoot rays on the corners
-            Vector3 offset = pair.getPortalObject(id).transform.localScale / 2.0f;
+            Vector3 offset = portal.transform.lossyScale / 2.0f;
             Vector3 xProj = portalRot * new Vector3(offset.x, 0.0f, 0.0f);
             Vector3 yProj = portalRot * new Vector3(0.0f, offset.y, 0.0f);
 
@@ -76,16 +82,13 @@ public class PortalCreator : MonoBehaviour
             else
                 shootLayer = shootLayer | LayerMask.GetMask("Red Portal Blocker");
 
-            while ((!bottomLeftValid || !topLeftValid || ! bottomRightValid || !topRightValid) && correctionIt < 2 * errorCorrectionSteps)
+            while ((!bottomLeftValid || !topLeftValid || !bottomRightValid || !topRightValid) && correctionIt < errorCorrectionSteps)
             {
-                RaycastHit bottomLeftHit;
-                Physics.Raycast(portalPos + hit.normal * 0.1f - xProj - yProj, direction, out bottomLeftHit, 0.5f, shootLayer);
-                RaycastHit topLeftHit;
-                Physics.Raycast(portalPos + hit.normal * 0.1f - xProj + yProj, direction, out topLeftHit, 0.5f, shootLayer);
-                RaycastHit bottomRightHit;
-                Physics.Raycast(portalPos + hit.normal * 0.1f + xProj - yProj, direction, out bottomRightHit, 0.5f, shootLayer);
-                RaycastHit topRightHit;
-                Physics.Raycast(portalPos + hit.normal * 0.1f + xProj + yProj, direction, out topRightHit, 0.5f, shootLayer);
+                RaycastHit bottomLeftHit, topLeftHit, bottomRightHit, topRightHit;
+                Physics.Raycast(portalPos + hit.normal * 0.1f - xProj - yProj, -hit.normal, out bottomLeftHit, 0.5f, shootLayer);
+                Physics.Raycast(portalPos + hit.normal * 0.1f - xProj + yProj, -hit.normal, out topLeftHit, 0.5f, shootLayer);
+                Physics.Raycast(portalPos + hit.normal * 0.1f + xProj - yProj, -hit.normal, out bottomRightHit, 0.5f, shootLayer);
+                Physics.Raycast(portalPos + hit.normal * 0.1f + xProj + yProj, -hit.normal, out topRightHit, 0.5f, shootLayer);
 
                 bottomLeftValid = bottomLeftHit.collider == hit.collider;
                 topLeftValid = topLeftHit.collider == hit.collider;
@@ -100,13 +103,13 @@ public class PortalCreator : MonoBehaviour
                     portalPos += (-xProj + yProj) / (float)errorCorrectionSteps;
                 if (!topRightValid)
                     portalPos += (-xProj - yProj) / (float)errorCorrectionSteps;
+
                 correctionIt++;
             }
 
             //Inside the wall with correction
-            if (correctionIt < 20)
+            if (correctionIt < errorCorrectionSteps)
                 pair.createPortal(id, hit.transform, portalPos, portalRot);
-            
         }
 
     }
