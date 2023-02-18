@@ -45,6 +45,7 @@
      <Compile Include="Assets/Scripts/PortalCreator.cs" />
      <Compile Include="Assets/Scripts/PortalPair.cs" />
      <Compile Include="Assets/Scripts/RenderablePortal.cs" />
+     <Compile Include="Assets/Scripts/PlayerActivateButtons.cs" />
      <None Include="Assets/Shaders/PortalInsideShader.shader" />
      <None Include="Assets/Shaders/PortalShader.shader" />
     <Reference Include="UnityEngine">
