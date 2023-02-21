@@ -665,13 +665,13 @@
       <Project>{97300d30-dd80-f073-8b02-8de71a11a09c}</Project>
       <Name>Unity.InputSystem</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{0fc6d15a-0b29-8b0e-7592-0e868b057c4f}</Project>
-      <Name>UnityEditor.UI</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{659944bc-afc8-668d-caab-84953a8da64d}</Project>
       <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{0fc6d15a-0b29-8b0e-7592-0e868b057c4f}</Project>
+      <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
       <Project>{e0975837-73bb-f19a-367e-579e978de7d5}</Project>

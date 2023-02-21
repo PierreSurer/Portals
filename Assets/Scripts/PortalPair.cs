@@ -24,7 +24,7 @@ public class PortalPair : MonoBehaviour
 
     public void createPortal(int id, Transform parentTransform, Vector3 position, Quaternion rotation)
     {
-
+        deletePortal(id);
         GameObject portal = getPortalObject(id);
         GameObject other = getPortalObject(1 - id);
 
@@ -46,16 +46,7 @@ public class PortalPair : MonoBehaviour
 
         portal.transform.position = position;
         portal.transform.rotation = rotation;
-
-        if (portal.activeInHierarchy)
-        {
-            Transform oldParent = portal.transform.parent;
-            portal.transform.SetParent(parentTransform ,true);
-            oldParent.gameObject.GetComponentInChildren<PortalCollidable>().calculateMesh();
-        }
-        else {
-            portal.transform.SetParent(parentTransform, true);
-        }
+        portal.transform.SetParent(parentTransform, true);
 
         portal.SetActive(true);
         portal.transform.parent.gameObject.GetComponentInChildren<PortalCollidable>().calculateMesh();
@@ -67,6 +58,7 @@ public class PortalPair : MonoBehaviour
         PortalCollidable collidable = portal.transform.parent.GetComponentInChildren<PortalCollidable>();
 
         portal.transform.SetParent(this.transform, true);
+        portal.transform.localScale = new Vector3(2.0f, 3.5f, 1.0f);
         portal.SetActive(false);
 
         if (collidable)

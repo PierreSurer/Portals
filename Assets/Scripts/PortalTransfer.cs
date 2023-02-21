@@ -14,6 +14,7 @@ public class PortalTransfer : MonoBehaviour
     private GameObject otherPortal;
     private Collider[] portals;
     private Collider selfCollider;
+    // private CharacterController charcontroller;
 
     private bool hit;
 
@@ -24,6 +25,7 @@ public class PortalTransfer : MonoBehaviour
         portals[0] = pair.getPortalObject(0).transform.GetComponentInChildren<BoxCollider>();
         portals[1] = pair.getPortalObject(1).transform.GetComponentInChildren<BoxCollider>();
         selfCollider = GetComponentInChildren<Collider>();
+        // charcontroller = GetComponent<CharacterController>();
 
         hit = false;
     }
@@ -42,9 +44,11 @@ public class PortalTransfer : MonoBehaviour
             // swap object and clone if it went through the portal
             if (relativePos.z < 0.0f)
             {
+                // charcontroller.SimpleMove(clonePortal.transform.localToWorldMatrix * (otherPortal.transform.worldToLocalMatrix * -charcontroller.velocity));
                 (transform.position, clone.transform.position) = (clone.transform.position, transform.position);
                 (transform.rotation, clone.transform.rotation) = (clone.transform.rotation, transform.rotation);
                 (clonePortal, otherPortal) = (otherPortal, clonePortal);
+                // transform.rotation = Quaternion.Euler(0.0f, transform.rotation.y, 0.0f);
             }
 
 
