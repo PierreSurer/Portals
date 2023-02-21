@@ -1,0 +1,42 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 22.08.2015 18:42:01
+
+newmtl Material__3260
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka C:\Users\vados\Desktop\3D models\Portal Stories Mel\Portal gun\textures\paper_clip.dds
+	map_Kd C:\Users\vados\Desktop\3D models\Portal Stories Mel\Portal gun\textures\paper_clip.dds
+
+newmtl Material__3259
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka C:\Users\vados\Desktop\3D models\Portal Stories Mel\Portal gun\textures\gun_d.dds
+	map_Kd C:\Users\vados\Desktop\3D models\Portal Stories Mel\Portal gun\textures\gun_d.dds
+
+newmtl 03___Default
+	Ns 9.999999
+	Ni 1.500000
+	d 0.290000
+	Tr 0.710000
+	Tf 0.290000 0.290000 0.290000 
+	illum 2
+	Ka 0.000000 0.564706 1.000000
+	Kd 0.000000 0.564706 1.000000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.564706 1.000000
